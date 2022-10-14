@@ -522,7 +522,7 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r",",
+            KeyboardText: isCapital ? r"," : r"$\equiv$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
