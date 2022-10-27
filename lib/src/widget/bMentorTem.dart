@@ -31,7 +31,7 @@ class _BMentorTempState extends State<BMentorTemp> {
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-    widget.changeValue.dispose();
+    // widget.changeValue.dispose();
   }
 
   FocusNode node = FocusNode();

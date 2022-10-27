@@ -56,7 +56,7 @@ class _ExampleState extends State<Example> {
   void dispose() {
     // TODO: implement dispose
     super.dispose();
-    changeValue.dispose();
+    // changeValue.dispose();
   }
 
   FocusNode node = FocusNode();
