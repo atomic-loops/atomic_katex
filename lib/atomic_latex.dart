@@ -6,3 +6,4 @@ export 'package:atomic_latex/src/widget/latex_field.dart';
 export 'package:atomic_latex/src/foundation/value.dart';
 export 'package:atomic_latex/src/widget/atomicKatexPreview.dart';
 export 'package:atomic_latex/src/widget/atomicField.dart';
+export 'package:atomic_latex/src/widget/keyboard.dart';
