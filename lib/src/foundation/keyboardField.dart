@@ -38,10 +38,8 @@ class LatexKey extends StatelessWidget {
               onLongPress: onLongPress,
               onHighlightChanged: onHightChange,
               onTap: () {
-                onTextInput.call(isTexOn
-                    ? KeyboardText.replaceAll(r"\Box", "")
-                    : KeyboardText.replaceAll("\$", "")
-                        .replaceAll(r"\Box", ""));
+                onTextInput.call(
+                    KeyboardText.replaceAll("\$", "").replaceAll(r"\Box", ""));
               },
               child: Center(
                   child: AtomicMathJax(

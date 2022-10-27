@@ -15,13 +15,13 @@ class AtomicKeyboard extends StatefulWidget {
     // required this.value,
     required this.onTextInput,
     required this.onBackspace,
-    required this.node,
+    // required this.node,
     required this.changeValue,
   }) : super(key: key);
   // final bool value1;
   final ValueSetter<String> onTextInput;
   final VoidCallback onBackspace;
-  final FocusNode node;
+  // final FocusNode node;
   final ChangeValue changeValue;
 
   @override
@@ -95,7 +95,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                               setState(() {
                                 aplpha = true;
                                 betaGamma = false;
-                                delimiter = true;
+                                delimiter = false;
                                 elnx = false;
                                 x2 = false;
                                 fx = false;
@@ -110,7 +110,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                               setState(() {
                                 aplpha = false;
                                 betaGamma = false;
-                                delimiter = true;
+                                delimiter = false;
                                 elnx = false;
                                 x2 = true;
                                 fx = false;
@@ -125,7 +125,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                               setState(() {
                                 aplpha = false;
                                 betaGamma = false;
-                                delimiter = true;
+                                delimiter = false;
                                 elnx = false;
                                 x2 = false;
                                 fx = false;
@@ -140,7 +140,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                               setState(() {
                                 aplpha = false;
                                 betaGamma = false;
-                                delimiter = true;
+                                delimiter = false;
                                 elnx = false;
                                 x2 = false;
                                 fx = true;
@@ -155,7 +155,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                               setState(() {
                                 aplpha = false;
                                 betaGamma = false;
-                                delimiter = true;
+                                delimiter = false;
                                 elnx = true;
                                 x2 = false;
                                 fx = false;
@@ -170,7 +170,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                               setState(() {
                                 aplpha = false;
                                 betaGamma = false;
-                                delimiter = true;
+                                delimiter = false;
                                 elnx = false;
                                 x2 = false;
                                 fx = false;
@@ -185,7 +185,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                               setState(() {
                                 aplpha = false;
                                 betaGamma = false;
-                                delimiter = true;
+                                delimiter = false;
                                 elnx = false;
                                 x2 = false;
                                 fx = false;
@@ -200,7 +200,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                               setState(() {
                                 aplpha = false;
                                 betaGamma = true;
-                                delimiter = true;
+                                delimiter = false;
                                 elnx = false;
                                 x2 = false;
                                 fx = false;
@@ -234,7 +234,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                     child: Body(
                       onBackspace: backspaceHandler,
                       onTextInput: textInputHandler,
-                      node: widget.node,
+                      // node: widget.node,
                       betaGamma: betaGamma,
                       alpha: aplpha, x2: x2, changeValue: widget.changeValue,
                       idTexOn: delimiter, fx: fx, sinx: sin, elnx: elnx,
