@@ -67,20 +67,24 @@ class _BMentorTempState extends State<BMentorTemp> {
                     Padding(
                       padding: const EdgeInsets.only(left: 16, right: 16),
                       child: Container(
-                        margin: EdgeInsets.only(left: 5, right: 5, top: 5),
+                        // margin: EdgeInsets.only(left: 5, right: 5, top: 5),
                         height: 193,
                         decoration: BoxDecoration(
                             color: Colors.grey.shade100,
                             borderRadius: BorderRadius.circular(10)),
-                        child: AtomicInputField(
-                          decoration: InputDecoration(border: InputBorder.none),
-                          node: node,
-                          isVisible: ((value) {
-                            setState(() {
-                              widget.changeValue.updateValue(value);
-                            });
-                          }),
-                          changeValue: widget.changeValue,
+                        child: Padding(
+                          padding: const EdgeInsets.all(3.0),
+                          child: AtomicInputField(
+                            decoration:
+                                InputDecoration(border: InputBorder.none),
+                            node: node,
+                            isVisible: ((value) {
+                              setState(() {
+                                widget.changeValue.updateValue(value);
+                              });
+                            }),
+                            changeValue: widget.changeValue,
+                          ),
                         ),
                       ),
                     ),
@@ -175,7 +179,7 @@ class _BMentorTempState extends State<BMentorTemp> {
 
                 setState(() {});
               },
-              // node: widget.node,
+              node: node,
               changeValue: widget.changeValue,
             ),
           ),

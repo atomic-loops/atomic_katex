@@ -48,7 +48,7 @@ class _AtomicFieldState extends State<AtomicField> {
               setState(() {});
             },
             // node: widget.node,
-            changeValue: widget.changeValue,
+            changeValue: widget.changeValue, node: widget.node,
           ),
         )
       ],

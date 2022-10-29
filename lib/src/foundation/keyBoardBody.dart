@@ -8,7 +8,7 @@ class Body extends StatefulWidget {
     required this.changeValue,
     required this.onTextInput,
     required this.onBackspace,
-    // required this.node,
+    required this.node,
     required this.fx,
     this.idTexOn = true,
     required this.alpha,
@@ -22,7 +22,7 @@ class Body extends StatefulWidget {
   final ChangeValue changeValue;
   final ValueSetter<String> onTextInput;
   final VoidCallback onBackspace;
-  // final FocusNode node;
+  final FocusNode node;
   bool idTexOn;
   bool alpha;
   bool sinx;
@@ -3732,7 +3732,7 @@ class _BodyState extends State<Body> {
           icon: Icons.done,
           iconsColors: Colors.white,
           tap: () {
-            // widget.node.unfocus();
+            widget.node.unfocus();
           },
         ),
       ],

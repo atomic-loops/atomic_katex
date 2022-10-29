@@ -41,7 +41,7 @@ class _AtomicKeyboardViewInsertState extends State<AtomicKeyboardViewInsert> {
             widget.changeValue.insertText(value);
             setState(() {});
           },
-          // node: widget.node,
+          node: widget.node,
           changeValue: widget.changeValue,
         ),
       )
