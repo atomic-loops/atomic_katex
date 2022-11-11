@@ -1,6 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:atomic_latex/src/foundation/atomicMathjax.dart';
 import 'package:flutter/material.dart';
+
+import 'package:atomic_latex/src/foundation/atomicMathjax.dart';
 
 class LatexKey extends StatelessWidget {
   var onLongPress;
@@ -110,7 +111,7 @@ class FunctionButton extends StatelessWidget {
     Key? key,
     required this.color,
     required this.onTab,
-    this.fontSize,
+    this.fontSize = 20,
     required this.KeyboardText,
   }) : super(key: key);
 
@@ -124,15 +125,54 @@ class FunctionButton extends StatelessWidget {
             color: color,
             child: InkWell(
               onTap: onTab,
-              child: Center(
-                  child: AtomicMathJax(
-                      textStyle: TextStyle(fontSize: fontSize),
-                      laTeXCode: Text(
-                        KeyboardText,
-                        style: TextStyle(fontSize: fontSize),
-                      ))),
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Center(
+                    child: AtomicMathJax(
+                        textStyle: TextStyle(fontSize: fontSize),
+                        laTeXCode: Text(
+                          KeyboardText,
+                          style: TextStyle(fontSize: fontSize),
+                        ))),
+              ),
             ),
           )),
+    );
+  }
+}
+
+class ButtonFuc extends StatelessWidget {
+  var tap;
+
+  final IconData? icon;
+  var color;
+  var iconsColors;
+
+  ButtonFuc({
+    Key? key,
+    required this.color,
+    required this.tap,
+    this.icon,
+    required this.iconsColors,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.all(2.0),
+      child: Material(
+        color: color,
+        child: InkWell(
+          onTap: tap,
+          child: Center(
+              child: icon == null
+                  ? Container()
+                  : Icon(
+                      icon,
+                      color: iconsColors,
+                    )),
+        ),
+      ),
     );
   }
 }
