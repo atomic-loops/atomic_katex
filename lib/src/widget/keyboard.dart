@@ -7,6 +7,7 @@ import 'package:atomic_latex/src/foundation/keyboardField.dart';
 import 'package:atomic_latex/src/foundation/mathFiels.dart';
 import 'package:atomic_latex/src/foundation/value.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class AtomicKeyboard extends StatefulWidget {
   @override
@@ -63,7 +64,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
 
   Widget build(BuildContext context) {
     return AnimatedContainer(
-        height: widget.changeValue.isOpen == true ? 350 : 0,
+        height: widget.changeValue.isOpen == true ? Get.height * 0.4 : 0,
         duration: const Duration(milliseconds: 200),
         // color: widget.changeValue.isOpen == true
         //     ? Colors.grey.shade200
@@ -88,147 +89,151 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                     ),
                   ),
                   Expanded(
-                      // flex: 1,
-                      child: Func(
-                          aplpha: () {
-                            if (aplpha == false) {
-                              setState(() {
-                                aplpha = true;
-                                betaGamma = false;
-                                delimiter = false;
-                                elnx = false;
-                                x2 = false;
-                                fx = false;
-                                intdx = false;
-                                sin = false;
-                                matrix = false;
-                              });
-                            }
-                          },
-                          x2: () {
-                            if (x2 == false) {
-                              setState(() {
-                                aplpha = false;
-                                betaGamma = false;
-                                delimiter = false;
-                                elnx = false;
-                                x2 = true;
-                                fx = false;
-                                intdx = false;
-                                sin = false;
-                                matrix = false;
-                              });
-                            }
-                          },
-                          sin: () {
-                            if (sin == false) {
-                              setState(() {
-                                aplpha = false;
-                                betaGamma = false;
-                                delimiter = false;
-                                elnx = false;
-                                x2 = false;
-                                fx = false;
-                                intdx = false;
-                                sin = true;
-                                matrix = false;
-                              });
-                            }
-                          },
-                          fx: () {
-                            if (fx == false) {
-                              setState(() {
-                                aplpha = false;
-                                betaGamma = false;
-                                delimiter = false;
-                                elnx = false;
-                                x2 = false;
-                                fx = true;
-                                intdx = false;
-                                sin = false;
-                                matrix = false;
-                              });
-                            }
-                          },
-                          elnx: () {
-                            if (elnx == false) {
-                              setState(() {
-                                aplpha = false;
-                                betaGamma = false;
-                                delimiter = false;
-                                elnx = true;
-                                x2 = false;
-                                fx = false;
-                                intdx = false;
-                                sin = false;
-                                matrix = false;
-                              });
-                            }
-                          },
-                          intdx: () {
-                            if (intdx == false) {
-                              setState(() {
-                                aplpha = false;
-                                betaGamma = false;
-                                delimiter = false;
-                                elnx = false;
-                                x2 = false;
-                                fx = false;
-                                intdx = true;
-                                sin = false;
-                                matrix = false;
-                              });
-                            }
-                          },
-                          matrix: () {
-                            if (matrix == false) {
-                              setState(() {
-                                aplpha = false;
-                                betaGamma = false;
-                                delimiter = false;
-                                elnx = false;
-                                x2 = false;
-                                fx = false;
-                                intdx = false;
-                                sin = false;
-                                matrix = true;
-                              });
-                            }
-                          },
-                          betaGamma: () {
-                            if (betaGamma == false) {
-                              setState(() {
-                                aplpha = false;
-                                betaGamma = true;
-                                delimiter = false;
-                                elnx = false;
-                                x2 = false;
-                                fx = false;
-                                intdx = false;
-                                sin = false;
-                                matrix = false;
-                              });
-                            }
-                          },
-                          delimiter: () {
-                            setState(() {
-                              delimiter = !delimiter;
-                            });
-                          },
-                          aplphaC:
-                              aplpha ? Colors.orange : Colors.grey.shade100,
-                          x2C: x2 ? Colors.orange : Colors.grey.shade100,
-                          sinC: sin ? Colors.orange : Colors.grey.shade100,
-                          fxC: fx ? Colors.orange : Colors.grey.shade100,
-                          elnxC: elnx ? Colors.orange : Colors.grey.shade100,
-                          intdxC: intdx ? Colors.orange : Colors.grey.shade100,
-                          matrixC:
-                              matrix ? Colors.orange : Colors.grey.shade100,
-                          betaGammaC:
-                              betaGamma ? Colors.orange : Colors.grey.shade100,
-                          delimiterC: delimiter
-                              ? Colors.orange
-                              : Colors.grey.shade100)),
+                    child: Func(
+                      aplpha: () {
+                        if (aplpha == false) {
+                          setState(() {
+                            aplpha = true;
+                            betaGamma = false;
+                            delimiter = false;
+                            elnx = false;
+                            x2 = false;
+                            fx = false;
+                            intdx = false;
+                            sin = false;
+                            matrix = false;
+                          });
+                        }
+                      },
+                      x2: () {
+                        if (x2 == false) {
+                          setState(() {
+                            aplpha = false;
+                            betaGamma = false;
+                            delimiter = false;
+                            elnx = false;
+                            x2 = true;
+                            fx = false;
+                            intdx = false;
+                            sin = false;
+                            matrix = false;
+                          });
+                        }
+                      },
+                      sin: () {
+                        if (sin == false) {
+                          setState(() {
+                            aplpha = false;
+                            betaGamma = false;
+                            delimiter = false;
+                            elnx = false;
+                            x2 = false;
+                            fx = false;
+                            intdx = false;
+                            sin = true;
+                            matrix = false;
+                          });
+                        }
+                      },
+                      fx: () {
+                        if (fx == false) {
+                          setState(() {
+                            aplpha = false;
+                            betaGamma = false;
+                            delimiter = false;
+                            elnx = false;
+                            x2 = false;
+                            fx = true;
+                            intdx = false;
+                            sin = false;
+                            matrix = false;
+                          });
+                        }
+                      },
+                      elnx: () {
+                        if (elnx == false) {
+                          setState(() {
+                            aplpha = false;
+                            betaGamma = false;
+                            delimiter = false;
+                            elnx = true;
+                            x2 = false;
+                            fx = false;
+                            intdx = false;
+                            sin = false;
+                            matrix = false;
+                          });
+                        }
+                      },
+                      intdx: () {
+                        if (intdx == false) {
+                          setState(() {
+                            aplpha = false;
+                            betaGamma = false;
+                            delimiter = false;
+                            elnx = false;
+                            x2 = false;
+                            fx = false;
+                            intdx = true;
+                            sin = false;
+                            matrix = false;
+                          });
+                        }
+                      },
+                      matrix: () {
+                        if (matrix == false) {
+                          setState(() {
+                            aplpha = false;
+                            betaGamma = false;
+                            delimiter = false;
+                            elnx = false;
+                            x2 = false;
+                            fx = false;
+                            intdx = false;
+                            sin = false;
+                            matrix = true;
+                          });
+                        }
+                      },
+                      betaGamma: () {
+                        if (betaGamma == false) {
+                          setState(() {
+                            aplpha = false;
+                            betaGamma = true;
+                            delimiter = false;
+                            elnx = false;
+                            x2 = false;
+                            fx = false;
+                            intdx = false;
+                            sin = false;
+                            matrix = false;
+                          });
+                        }
+                      },
+                      delimiter: () {
+                        setState(() {
+                          delimiter = !delimiter;
+                        });
+                      },
+                      aplphaC: aplpha ? Colors.orange : Colors.grey.shade100,
+                      x2C: x2 ? Colors.orange : Colors.grey.shade100,
+                      sinC: sin ? Colors.orange : Colors.grey.shade100,
+                      fxC: fx ? Colors.orange : Colors.grey.shade100,
+                      elnxC: elnx ? Colors.orange : Colors.grey.shade100,
+                      intdxC: intdx ? Colors.orange : Colors.grey.shade100,
+                      matrixC: matrix ? Colors.orange : Colors.grey.shade100,
+                      betaGammaC:
+                          betaGamma ? Colors.orange : Colors.grey.shade100,
+                      delimiterC:
+                          delimiter ? Colors.orange : Colors.grey.shade100,
+                      nextTab: () {
+                        widget.changeValue.nextPosition();
+                      },
+                      previousTab: () {
+                        widget.changeValue.previousPosition();
+                      },
+                    ),
+                  ),
                   Expanded(
                     flex: 4,
                     child: Body(
