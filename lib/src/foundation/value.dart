@@ -6,6 +6,37 @@ class ChangeValue extends ChangeNotifier {
   String previewString = "Long press on latex to preview";
   TextEditingController controller = TextEditingController();
 
+  List<String> undoValue = [];
+
+  nextPosition() {
+    final textSelection = controller.selection;
+    controller.selection = textSelection.copyWith(
+      baseOffset: textSelection.start + 1,
+      extentOffset: textSelection.start + 1,
+    );
+  }
+
+  previousPosition() {
+    final textSelection = controller.selection;
+    if (textSelection.start == 0) {
+    } else {
+      controller.selection = textSelection.copyWith(
+        baseOffset: textSelection.start - 1,
+        extentOffset: textSelection.start - 1,
+      );
+    }
+  }
+
+  addToUndo(value) {
+    undoValue.add(value);
+  }
+
+  undoFunc() {
+    undoValue.removeLast();
+    controller.text = undoValue.last;
+    notifyListeners();
+  }
+
   void updateValue(bool value) {
     isOpen = value;
     notifyListeners();
