@@ -62,12 +62,15 @@ class ButtonKey extends StatelessWidget {
 
   var iconsColors;
 
+  var onLongPress;
+
   ButtonKey({
     Key? key,
     this.icon,
     required this.color,
     this.iconsColors,
     this.flex = 1,
+    this.onLongPress,
     this.tap,
   }) : super(key: key);
 
@@ -84,6 +87,7 @@ class ButtonKey extends StatelessWidget {
           borderRadius: BorderRadius.circular(7),
           color: color,
           child: InkWell(
+            onLongPress: onLongPress,
             onTap: tap,
             child: Center(
                 child: icon == null
@@ -159,7 +163,7 @@ class ButtonFuc extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(2.0),
+      padding: const EdgeInsets.all(4.0),
       child: Material(
         color: color,
         child: InkWell(

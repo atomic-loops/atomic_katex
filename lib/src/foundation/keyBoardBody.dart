@@ -2076,8 +2076,9 @@ class _BodyState extends State<Body> {
           ),
           ButtonKey(
             color: Colors.grey,
-
-            // onLongPress: () {},
+            onLongPress: () {
+              widget.changeValue.deleteAll();
+            },
             icon: Icons.backspace,
             tap: () {
               widget.onBackspace.call();
@@ -3950,7 +3951,9 @@ class _BodyState extends State<Body> {
         ButtonKey(
           color: Colors.white,
           flex: 2,
-          // onLongPress: () {},
+          onLongPress: () {
+            widget.changeValue.deleteAll();
+          },
           icon: Icons.backspace,
           tap: () {
             widget.onBackspace.call();

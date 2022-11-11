@@ -8,6 +8,20 @@ class ChangeValue extends ChangeNotifier {
 
   List<String> undoValue = [];
 
+  deleteAll() {
+    final textSelection = controller.selection;
+
+    final text = controller.text;
+    if (textSelection.start == 0) {
+    } else {
+      controller.text = text.replaceAll(text.characters.last, "");
+
+      controller.selection = textSelection.copyWith(
+          baseOffset: controller.text.length,
+          extentOffset: controller.text.length);
+    }
+  }
+
   nextPosition() {
     final textSelection = controller.selection;
     controller.selection = textSelection.copyWith(
