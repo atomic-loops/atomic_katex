@@ -647,7 +647,7 @@ class _BodyState extends State<Body> {
             // Timer(Duration(seconds: 1), change());
             // }
 
-            KeyboardText: r"$\det$",
+            KeyboardText: r"$\det $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 15,
@@ -891,13 +891,13 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\times$",
+            KeyboardText: r"$\times $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\div$",
+            KeyboardText: r"$\div $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -1082,7 +1082,7 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\cdot$",
+            KeyboardText: r"$\cdot $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -1094,13 +1094,15 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
+            textAlign: TextAlign.end,
+            mathjax: true,
             KeyboardText: r"$.$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\ne$",
+            KeyboardText: r"$\ne $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -1130,13 +1132,13 @@ class _BodyState extends State<Body> {
       child: Row(
         children: [
           LatexKey(
-            KeyboardText: r"$\int$",
+            KeyboardText: r"$\int $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 10,
           ),
           LatexKey(
-            KeyboardText: r"$dx$",
+            KeyboardText: r"$dx $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 17,
@@ -1439,13 +1441,13 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\times$",
+            KeyboardText: r"$\times $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\div$",
+            KeyboardText: r"$\div $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -1552,7 +1554,7 @@ class _BodyState extends State<Body> {
     return Expanded(
       child: Row(children: [
         LatexKey(
-          KeyboardText: r"$\log$",
+          KeyboardText: r"$\log $",
           onTextInput: textInputHandler,
           isTexOn: widget.idTexOn,
           fontSize: 15,
@@ -1564,7 +1566,7 @@ class _BodyState extends State<Body> {
           fontSize: 17,
         ),
         LatexKey(
-          KeyboardText: r"$\ln$",
+          KeyboardText: r"$\ln $",
           onTextInput: textInputHandler,
           isTexOn: widget.idTexOn,
           fontSize: 15,
@@ -1836,13 +1838,13 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\times$",
+            KeyboardText: r"$\times $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\div$",
+            KeyboardText: r"$\div $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -1974,13 +1976,13 @@ class _BodyState extends State<Body> {
       child: Row(
         children: [
           LatexKey(
-            KeyboardText: r"$\in$",
+            KeyboardText: r"$\in $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\infty$",
+            KeyboardText: r"$\infty $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -2045,7 +2047,7 @@ class _BodyState extends State<Body> {
             fontSize: 10,
           ),
           LatexKey(
-            KeyboardText: r"$\cdot$",
+            KeyboardText: r"$\cdot $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -2057,13 +2059,15 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
+            mathjax: true,
+            textAlign: TextAlign.end,
             KeyboardText: r"$.$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\ne$",
+            KeyboardText: r"$\ne $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -2160,6 +2164,7 @@ class _BodyState extends State<Body> {
               // }
               print(isHighLight);
             },
+            mathjax: true,
             KeyboardText: r"${\Box}_{\Box}$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
@@ -2301,6 +2306,7 @@ class _BodyState extends State<Body> {
             //   // }
             //   print(isHighLight);
             // },
+            mathjax: true,
             KeyboardText: r"$\R$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
@@ -2355,13 +2361,13 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\times$",
+            KeyboardText: r"$\times $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\div$",
+            KeyboardText: r"$\div $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -2493,13 +2499,13 @@ class _BodyState extends State<Body> {
       child: Row(
         children: [
           LatexKey(
-            KeyboardText: r"$\in$",
+            KeyboardText: r"$\in $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\infty$",
+            KeyboardText: r"$\infty $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -2564,7 +2570,7 @@ class _BodyState extends State<Body> {
             fontSize: 10,
           ),
           LatexKey(
-            KeyboardText: r"$\cdot$",
+            KeyboardText: r"$\cdot $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -2576,13 +2582,15 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
+            mathjax: true,
+            textAlign: TextAlign.end,
             KeyboardText: r"$.$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\ne$",
+            KeyboardText: r"$\ne $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -2612,25 +2620,25 @@ class _BodyState extends State<Body> {
       child: Row(
         children: [
           LatexKey(
-            KeyboardText: r"$\sin$",
+            KeyboardText: r"$\sin $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 17,
           ),
           LatexKey(
-            KeyboardText: r"$\csc$",
+            KeyboardText: r"$\csc $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 17,
           ),
           LatexKey(
-            KeyboardText: r"$\theta$",
+            KeyboardText: r"$\theta $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\pi$",
+            KeyboardText: r"$\pi $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -2705,19 +2713,19 @@ class _BodyState extends State<Body> {
       child: Row(
         children: [
           LatexKey(
-            KeyboardText: r"$\cos$",
+            KeyboardText: r"$\cos $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 17,
           ),
           LatexKey(
-            KeyboardText: r"$\sec$",
+            KeyboardText: r"$\sec $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 17,
           ),
           LatexKey(
-            KeyboardText: r"$\triangle$",
+            KeyboardText: r"$\triangle $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -2777,13 +2785,13 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\times$",
+            KeyboardText: r"$\times $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\div$",
+            KeyboardText: r"$\div $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -2798,19 +2806,19 @@ class _BodyState extends State<Body> {
       child: Row(
         children: [
           LatexKey(
-            KeyboardText: r"$\tan$",
+            KeyboardText: r"$\tan $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 17,
           ),
           LatexKey(
-            KeyboardText: r"$\cot$",
+            KeyboardText: r"$\cot $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 17,
           ),
           LatexKey(
-            KeyboardText: r"$\Box$",
+            KeyboardText: r"$\Box $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -2840,6 +2848,7 @@ class _BodyState extends State<Body> {
               // }
               print(isHighLight);
             },
+            mathjax: true,
             KeyboardText: r"$\mathrm{\hat{ABC}}$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
@@ -2963,7 +2972,7 @@ class _BodyState extends State<Body> {
             fontSize: 15,
           ),
           LatexKey(
-            KeyboardText: r"$\cdot$",
+            KeyboardText: r"$\cdot $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -2975,13 +2984,15 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
+            mathjax: true,
+            textAlign: TextAlign.end,
             KeyboardText: r"$.$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\ne$",
+            KeyboardText: r"$\ne $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -3053,7 +3064,7 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\pi$",
+            KeyboardText: r"$\pi $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -3128,7 +3139,7 @@ class _BodyState extends State<Body> {
       child: Row(
         children: [
           LatexKey(
-            KeyboardText: r"$\infty$",
+            KeyboardText: r"$\infty $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -3248,13 +3259,13 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\times$",
+            KeyboardText: r"$\times $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\div$",
+            KeyboardText: r"$\div $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -3434,7 +3445,8 @@ class _BodyState extends State<Body> {
             //   // }
             //   print(isHighLight);
             // },
-            KeyboardText: r"$\cdot$",
+            mathjax: true,
+            KeyboardText: r"$\cdot $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -3446,13 +3458,15 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
+            mathjax: true,
+            textAlign: TextAlign.end,
             KeyboardText: r"$.$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\ne$",
+            KeyboardText: r"$\ne $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -3494,19 +3508,19 @@ class _BodyState extends State<Body> {
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\leq$",
+            KeyboardText: r"$\leq $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\geq$",
+            KeyboardText: r"$\geq $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
-            KeyboardText: r"$\pm$",
+            KeyboardText: r"$\pm $",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
