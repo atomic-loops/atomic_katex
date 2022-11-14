@@ -1,4 +1,5 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:atomic_latex/src/foundation/atomicKatex.dart';
 import 'package:flutter/material.dart';
 
 import 'package:atomic_latex/src/foundation/atomicMathjax.dart';
@@ -10,14 +11,20 @@ class LatexKey extends StatelessWidget {
 
   double fontSize;
 
+  bool mathjax;
+
+  var textAlign;
+
   LatexKey({
     Key? key,
+    this.mathjax = false,
     this.onLongPress,
     this.onHightChange,
     this.fontSize = 12,
     required this.KeyboardText,
     this.isTexOn = true,
     required this.onTextInput,
+    this.textAlign = TextAlign.center,
     this.flex = 1,
   }) : super(key: key);
 
@@ -43,12 +50,19 @@ class LatexKey extends StatelessWidget {
                     KeyboardText.replaceAll("\$", "").replaceAll(r"\Box", ""));
               },
               child: Center(
-                  child: AtomicMathJax(
-                      textStyle: TextStyle(fontSize: fontSize),
-                      laTeXCode: Text(
-                        KeyboardText,
-                        style: TextStyle(fontSize: fontSize),
-                      ))),
+                  child: mathjax
+                      ? AtomicKatex(
+                          textStyle: TextStyle(fontSize: fontSize),
+                          laTeXCode: Text(
+                            KeyboardText,
+                            style: TextStyle(fontSize: fontSize),
+                            textAlign: textAlign,
+                          ))
+                      : AtomicMathJax(
+                          textStyle: TextStyle(fontSize: fontSize),
+                          laTeXCode: Text(KeyboardText,
+                              style: TextStyle(fontSize: fontSize),
+                              textAlign: textAlign))),
             ),
           )),
     );
