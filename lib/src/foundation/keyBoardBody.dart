@@ -42,6 +42,7 @@ class _BodyState extends State<Body> {
 
   void backspaceHandler() => widget.onBackspace.call();
   bool isCapital = true;
+  bool english = true;
 
   bool isHighLight = false;
   // String value = "";
@@ -56,7 +57,11 @@ class _BodyState extends State<Body> {
           child: Column(
             children: [
               if (widget.alpha == true) ...[
-                alphaKeyboard()
+                if (english == true) ...[
+                  alphaKeyboard()
+                ] else ...[
+                  thaiKeyboard()
+                ]
               ] else if (widget.x2 == true) ...[
                 x2()
               ] else if (widget.sinx == true) ...[
@@ -91,6 +96,308 @@ class _BodyState extends State<Body> {
         ],
       ),
     );
+  }
+
+  thaiKeyboard() {
+    return Expanded(
+      child: Column(
+        children: [
+          thai1(),
+          thai2(),
+          thai3(),
+          thai4(),
+          funcationKey(),
+        ],
+      ),
+    );
+  }
+
+  Expanded thai1() {
+    return Expanded(
+        child: Row(
+      children: [
+        LatexKey(
+          KeyboardText: isCapital ? "ๅ" : "+",
+          // LatexText: isCapital ? "Q" : "q",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "/" : "๑",
+          // LatexText: isCapital ? "W" : "w",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "_" : "๒",
+          // LatexText: isCapital ? "E" : "e",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ภ" : "๓",
+          // LatexText: isCapital ? "R" : "r",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ถ" : "๔",
+          //  LatexText: isCapital ? "T" : "t",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          mathjax: true,
+          KeyboardText: isCapital ? "ุ" : "ู",
+          // LatexText: isCapital ? "Y" : "y",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          mathjax: true,
+          KeyboardText: isCapital ? "ึ" : "฿",
+          // LatexText: isCapital ? "U" : "u",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ค" : "๕",
+          // LatexText: isCapital ? "I" : "i",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ต" : "๖",
+          // LatexText: isCapital ? "O" : "o",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "จ" : "๗",
+          // /  LatexText: isCapital ? "P" : "p",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ข" : "๘",
+          // LatexText: isCapital ? "O" : "o",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ช" : "๙",
+          // /  LatexText: isCapital ? "P" : "p",
+          onTextInput: textInputHandler,
+        ),
+      ],
+    ));
+  }
+
+  Expanded thai2() {
+    return Expanded(
+        child: Row(
+      children: [
+        LatexKey(
+          KeyboardText: isCapital ? "ๆ" : "๐",
+          // LatexText: isCapital ? "Q" : "q",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ไ" : "“",
+          // LatexText: isCapital ? "W" : "w",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? " ำ" : "ฎ",
+          // LatexText: isCapital ? "E" : "e",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "พ" : "ฑ",
+          // LatexText: isCapital ? "R" : "r",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ะ" : "ธ",
+          //  LatexText: isCapital ? "T" : "t",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          mathjax: true,
+          KeyboardText: isCapital ? "ั" : " ํ",
+          // LatexText: isCapital ? "Y" : "y",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          mathjax: true,
+          KeyboardText: isCapital ? " ี" : " ๊",
+          // LatexText: isCapital ? "U" : "u",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ัร" : "ณ",
+          // LatexText: isCapital ? "I" : "i",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ัน" : "ฯ",
+          // LatexText: isCapital ? "O" : "o",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ัย" : "ญ",
+          // /  LatexText: isCapital ? "P" : "p",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ับ" : "ฐ",
+          // LatexText: isCapital ? "O" : "o",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ัล" : ",",
+          // /  LatexText: isCapital ? "P" : "p",
+          onTextInput: textInputHandler,
+        ),
+      ],
+    ));
+  }
+
+  Expanded thai3() {
+    return Expanded(
+        child: Row(
+      children: [
+        LatexKey(
+          KeyboardText: isCapital ? "ฟ" : "ฤ",
+          // LatexText: isCapital ? "Q" : "q",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ห" : "ฆ",
+          // LatexText: isCapital ? "W" : "w",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ก" : "ฏ",
+          // LatexText: isCapital ? "E" : "e",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ด" : "โ",
+          // LatexText: isCapital ? "R" : "r",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "เ" : "ฌ",
+          //  LatexText: isCapital ? "T" : "t",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          mathjax: true,
+          KeyboardText: isCapital ? " ้" : " ็",
+          // LatexText: isCapital ? "Y" : "y",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          mathjax: true,
+          KeyboardText: isCapital ? " ่" : " ๋",
+          // LatexText: isCapital ? "U" : "u",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "า" : "ษ",
+          // LatexText: isCapital ? "I" : "i",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ส" : "ศ",
+          // LatexText: isCapital ? "O" : "o",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ว" : "ซ",
+          // /  LatexText: isCapital ? "P" : "p",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ง" : ".",
+          // LatexText: isCapital ? "O" : "o",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ฃ" : "ฅ",
+          // /  LatexText: isCapital ? "P" : "p",
+          onTextInput: textInputHandler,
+        ),
+      ],
+    ));
+  }
+
+  thai4() {
+    return Expanded(
+        child: Row(
+      children: [
+        ButtonKey(
+          color: Colors.white,
+          flex: 2,
+          iconsColors: isCapital ? Colors.blue : Colors.black,
+          icon: Icons.upgrade,
+          tap: () {
+            setState(() {
+              isCapital = !isCapital;
+            });
+          },
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ผ" : "ฉ",
+          // LatexText: isCapital ? "Z" : "z",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ป" : "ฮ",
+          // LatexText: isCapital ? "X" : "x",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "แ" : " ฺ",
+          // LatexText: isCapital ? "C" : "c",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "อ" : " ์",
+          // LatexText: isCapital ? "V" : "v",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? " ิ" : "?",
+          // LatexText: isCapital ? "B" : "b",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? " ื" : "ฒ",
+          // LatexText: isCapital ? "N" : "n",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ท" : "ฬ",
+          // LatexText: isCapital ? "M" : "m",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ม" : "ฦ",
+          // LatexText: isCapital ? "B" : "b",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ใ" : "(",
+          // LatexText: isCapital ? "N" : "n",
+          onTextInput: textInputHandler,
+        ),
+        LatexKey(
+          KeyboardText: isCapital ? "ฝ" : ")",
+          // LatexText: isCapital ? "M" : "m",
+          onTextInput: textInputHandler,
+        ),
+        ButtonKey(
+          color: Colors.blue,
+          flex: 2,
+          icon: Icons.done,
+          iconsColors: Colors.white,
+          tap: () {
+            widget.node.unfocus();
+          },
+        ),
+      ],
+    ));
   }
 
   x2() {
@@ -3947,8 +4254,14 @@ class _BodyState extends State<Body> {
         //   },
         // ),
         ButtonKey(
+          onLongPress: () {
+            setState(() {
+              english = !english;
+            });
+          },
           color: Colors.white,
           flex: 5,
+          widget: english ? Text("English") : Text("Thai"),
           // icon: Icons.next_plan,
           tap: () {
             textInputHandler(" ");
