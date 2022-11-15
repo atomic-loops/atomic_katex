@@ -78,9 +78,12 @@ class ButtonKey extends StatelessWidget {
 
   var onLongPress;
 
+  var widget;
+
   ButtonKey({
     Key? key,
     this.icon,
+    this.widget,
     required this.color,
     this.iconsColors,
     this.flex = 1,
@@ -105,7 +108,7 @@ class ButtonKey extends StatelessWidget {
             onTap: tap,
             child: Center(
                 child: icon == null
-                    ? Container()
+                    ? widget
                     : Icon(
                         icon,
                         color: iconsColors,
