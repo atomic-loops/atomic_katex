@@ -143,7 +143,7 @@ class _BodyState extends State<Body> {
         ),
         LatexKey(
           mathjax: true,
-          KeyboardText: isCapital ? "ุ" : "ู",
+          KeyboardText: isCapital ? "ุ" : r"$ุ$",
           // LatexText: isCapital ? "Y" : "y",
           onTextInput: textInputHandler,
         ),
@@ -513,28 +513,27 @@ class _BodyState extends State<Body> {
           ),
           LatexKey(
             mathjax: true,
-            KeyboardText: isCapital ? r"$\lozenge$" : r"$\char``1F44C$",
+            KeyboardText: isCapital ? r"$\lozenge$" : r"$😂$",
+            onTextInput: textInputHandler,
+            isTexOn: widget.idTexOn,
+            fontSize: 20,
+          ),
+          LatexKey(
+            KeyboardText: isCapital ? r"$\blacklozenge$" : r"$😭$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
             mathjax: true,
-            KeyboardText: isCapital ? r"$\blacklozenge$" : r"$\char``1F44D$",
+            KeyboardText: isCapital ? r"$\hearts$" : r"$🔥$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
           ),
           LatexKey(
             mathjax: true,
-            KeyboardText: isCapital ? r"$\hearts$" : r"$\char``1F44F$",
-            onTextInput: textInputHandler,
-            isTexOn: widget.idTexOn,
-            fontSize: 20,
-          ),
-          LatexKey(
-            mathjax: true,
-            KeyboardText: isCapital ? r"$\spades$" : r"$\char``1F44B$",
+            KeyboardText: isCapital ? r"$\spades$" : r"$😍$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -590,7 +589,7 @@ class _BodyState extends State<Body> {
           ),
           LatexKey(
             mathjax: true,
-            KeyboardText: isCapital ? r"$\bigstar$" : r"$\char``1F600$",
+            KeyboardText: isCapital ? r"$\bigstar$" : r"$$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,
             fontSize: 20,
@@ -872,7 +871,7 @@ class _BodyState extends State<Body> {
             flex: 1,
             icon: Icons.skip_next,
             tap: () {
-              textInputHandler("\n");
+              textInputHandler(r"\\");
             },
           ),
         ],
@@ -3888,7 +3887,7 @@ class _BodyState extends State<Body> {
             flex: 1,
             icon: Icons.skip_next,
             tap: () {
-              textInputHandler("\n");
+              textInputHandler(r"\\");
             },
           ),
         ],
@@ -4297,7 +4296,7 @@ class _BodyState extends State<Body> {
           flex: 1,
           icon: Icons.skip_next,
           tap: () {
-            textInputHandler("\n");
+            textInputHandler(r"\\");
           },
         ),
         ButtonKey(
