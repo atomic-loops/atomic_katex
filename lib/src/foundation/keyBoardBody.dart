@@ -112,68 +112,95 @@ class _BodyState extends State<Body> {
     );
   }
 
+  // Expanded thai1() {
+  //   return Expanded(
+  //       child: Image(
+  //     image: NetworkImage(
+  //         "https://media.architecturaldigest.com/photos/57c7003f71ea71ec6e0f4314/master/w_1600,c_limit/IMG%20Worlds%20of%20Adventure%20-%202.jpg"),
+  //   ));
+  // }
+  //   return Expanded(
+  //       child: Row(
+
   Expanded thai1() {
     return Expanded(
         child: Row(
       children: [
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiA1.png" : "assets/thai/thaiA1.png",
           KeyboardText: isCapital ? "ๅ" : "+",
           // LatexText: isCapital ? "Q" : "q",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiA2.png" : "assets/thai/thaiA2.png",
           KeyboardText: isCapital ? "/" : "๑",
           // LatexText: isCapital ? "W" : "w",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiA3.png" : "assets/thai/thaiA3.png",
           KeyboardText: isCapital ? "_" : "๒",
           // LatexText: isCapital ? "E" : "e",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          alignment: Alignment.topCenter,
+          img: isCapital ? "assets/thai2/thaiA4.png" : "assets/thai/thaiA4.png",
           KeyboardText: isCapital ? "ภ" : "๓",
           // LatexText: isCapital ? "R" : "r",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiA5.png" : "assets/thai/thaiA5.png",
           KeyboardText: isCapital ? "ถ" : "๔",
           //  LatexText: isCapital ? "T" : "t",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
-          mathjax: true,
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiA6.png" : "assets/thai/thaiA6.png",
           KeyboardText: isCapital ? "ุ" : r"$ุ$",
           // LatexText: isCapital ? "Y" : "y",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
-          mathjax: true,
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiA7.png" : "assets/thai/thaiA7.png",
           KeyboardText: isCapital ? "ึ" : "฿",
           // LatexText: isCapital ? "U" : "u",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiA8.png" : "assets/thai/thaiA8.png",
           KeyboardText: isCapital ? "ค" : "๕",
           // LatexText: isCapital ? "I" : "i",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiA9.png" : "assets/thai/thaiA9.png",
           KeyboardText: isCapital ? "ต" : "๖",
           // LatexText: isCapital ? "O" : "o",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital
+              ? "assets/thai2/thaiA10.png"
+              : "assets/thai/thaiA10.png",
           KeyboardText: isCapital ? "จ" : "๗",
           // /  LatexText: isCapital ? "P" : "p",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital
+              ? "assets/thai2/thaiA11.png"
+              : "assets/thai/thaiA11.png",
           KeyboardText: isCapital ? "ข" : "๘",
           // LatexText: isCapital ? "O" : "o",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital
+              ? "assets/thai2/thaiA12.png"
+              : "assets/thai/thaiA12.png",
           KeyboardText: isCapital ? "ช" : "๙",
           // /  LatexText: isCapital ? "P" : "p",
           onTextInput: textInputHandler,
@@ -186,64 +213,80 @@ class _BodyState extends State<Body> {
     return Expanded(
         child: Row(
       children: [
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiB1.png" : "assets/thai/thaiB1.png",
           KeyboardText: isCapital ? "ๆ" : "๐",
           // LatexText: isCapital ? "Q" : "q",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiB2.png" : "assets/thai/thaiB2.png",
           KeyboardText: isCapital ? "ไ" : "“",
           // LatexText: isCapital ? "W" : "w",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiB3.png" : "assets/thai/thaiB3.png",
           KeyboardText: isCapital ? " ำ" : "ฎ",
           // LatexText: isCapital ? "E" : "e",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiB4.png" : "assets/thai/thaiB4.png",
           KeyboardText: isCapital ? "พ" : "ฑ",
           // LatexText: isCapital ? "R" : "r",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiB5.png" : "assets/thai/thaiB5.png",
           KeyboardText: isCapital ? "ะ" : "ธ",
           //  LatexText: isCapital ? "T" : "t",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
-          mathjax: true,
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiB6.png" : "assets/thai/thaiB6.png",
           KeyboardText: isCapital ? "ั" : " ํ",
           // LatexText: isCapital ? "Y" : "y",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
-          mathjax: true,
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiB7.png" : "assets/thai/thaiB7.png",
           KeyboardText: isCapital ? " ี" : " ๊",
           // LatexText: isCapital ? "U" : "u",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiB8.png" : "assets/thai/thaiB8.png",
           KeyboardText: isCapital ? "ัร" : "ณ",
           // LatexText: isCapital ? "I" : "i",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiB9.png" : "assets/thai/thaiB9.png",
           KeyboardText: isCapital ? "ัน" : "ฯ",
           // LatexText: isCapital ? "O" : "o",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital
+              ? "assets/thai2/thaiB10.png"
+              : "assets/thai/thaiB10.png",
           KeyboardText: isCapital ? "ัย" : "ญ",
           // /  LatexText: isCapital ? "P" : "p",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital
+              ? "assets/thai2/thaiB11.png"
+              : "assets/thai/thaiB11.png",
           KeyboardText: isCapital ? "ับ" : "ฐ",
           // LatexText: isCapital ? "O" : "o",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital
+              ? "assets/thai2/thaiB12.png"
+              : "assets/thai/thaiB12.png",
           KeyboardText: isCapital ? "ัล" : ",",
           // /  LatexText: isCapital ? "P" : "p",
           onTextInput: textInputHandler,
@@ -256,64 +299,80 @@ class _BodyState extends State<Body> {
     return Expanded(
         child: Row(
       children: [
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiC1.png" : "assets/thai/thaiC1.png",
           KeyboardText: isCapital ? "ฟ" : "ฤ",
           // LatexText: isCapital ? "Q" : "q",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiC2.png" : "assets/thai/thaiC2.png",
           KeyboardText: isCapital ? "ห" : "ฆ",
           // LatexText: isCapital ? "W" : "w",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiC3.png" : "assets/thai/thaiC3.png",
           KeyboardText: isCapital ? "ก" : "ฏ",
           // LatexText: isCapital ? "E" : "e",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiC4.png" : "assets/thai/thaiC4.png",
           KeyboardText: isCapital ? "ด" : "โ",
           // LatexText: isCapital ? "R" : "r",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiC5.png" : "assets/thai/thaiC5.png",
           KeyboardText: isCapital ? "เ" : "ฌ",
           //  LatexText: isCapital ? "T" : "t",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
-          mathjax: true,
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiC6.png" : "assets/thai/thaiC6.png",
           KeyboardText: isCapital ? " ้" : " ็",
           // LatexText: isCapital ? "Y" : "y",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
-          mathjax: true,
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiC7.png" : "assets/thai/thaiC7.png",
           KeyboardText: isCapital ? " ่" : " ๋",
           // LatexText: isCapital ? "U" : "u",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiC8.png" : "assets/thai/thaiC8.png",
           KeyboardText: isCapital ? "า" : "ษ",
           // LatexText: isCapital ? "I" : "i",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiC9.png" : "assets/thai/thaiC9.png",
           KeyboardText: isCapital ? "ส" : "ศ",
           // LatexText: isCapital ? "O" : "o",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital
+              ? "assets/thai2/thaiC10.png"
+              : "assets/thai/thaiC10.png",
           KeyboardText: isCapital ? "ว" : "ซ",
           // /  LatexText: isCapital ? "P" : "p",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital
+              ? "assets/thai2/thaiC11.png"
+              : "assets/thai/thaiC11.png",
           KeyboardText: isCapital ? "ง" : ".",
           // LatexText: isCapital ? "O" : "o",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital
+              ? "assets/thai2/thaiC12.png"
+              : "assets/thai/thaiC12.png",
           KeyboardText: isCapital ? "ฃ" : "ฅ",
           // /  LatexText: isCapital ? "P" : "p",
           onTextInput: textInputHandler,
@@ -337,52 +396,64 @@ class _BodyState extends State<Body> {
             });
           },
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiD1.png" : "assets/thai/thaiD1.png",
           KeyboardText: isCapital ? "ผ" : "ฉ",
           // LatexText: isCapital ? "Z" : "z",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiD2.png" : "assets/thai/thaiD2.png",
           KeyboardText: isCapital ? "ป" : "ฮ",
           // LatexText: isCapital ? "X" : "x",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiD3.png" : "assets/thai/thaiD3.png",
           KeyboardText: isCapital ? "แ" : " ฺ",
           // LatexText: isCapital ? "C" : "c",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiD4.png" : "assets/thai/thaiD4.png",
           KeyboardText: isCapital ? "อ" : " ์",
           // LatexText: isCapital ? "V" : "v",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiD5.png" : "assets/thai/thaiD5.png",
           KeyboardText: isCapital ? " ิ" : "?",
           // LatexText: isCapital ? "B" : "b",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiD6.png" : "assets/thai/thaiD6.png",
           KeyboardText: isCapital ? " ื" : "ฒ",
           // LatexText: isCapital ? "N" : "n",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiD7.png" : "assets/thai/thaiD7.png",
           KeyboardText: isCapital ? "ท" : "ฬ",
           // LatexText: isCapital ? "M" : "m",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiD8.png" : "assets/thai/thaiD8.png",
           KeyboardText: isCapital ? "ม" : "ฦ",
           // LatexText: isCapital ? "B" : "b",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital ? "assets/thai2/thaiD9.png" : "assets/thai/thaiD9.png",
           KeyboardText: isCapital ? "ใ" : "(",
           // LatexText: isCapital ? "N" : "n",
           onTextInput: textInputHandler,
         ),
-        LatexKey(
+        ThaiKeyboard(
+          img: isCapital
+              ? "assets/thai2/thaiD10.png"
+              : "assets/thai/thaiD10.png",
           KeyboardText: isCapital ? "ฝ" : ")",
           // LatexText: isCapital ? "M" : "m",
           onTextInput: textInputHandler,

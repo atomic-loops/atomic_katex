@@ -1,7 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
-import 'package:atomic_latex/src/foundation/atomicKatex.dart';
 import 'package:flutter/material.dart';
 
+import 'package:atomic_latex/src/foundation/atomicKatex.dart';
 import 'package:atomic_latex/src/foundation/atomicMathjax.dart';
 
 class LatexKey extends StatelessWidget {
@@ -194,6 +194,62 @@ class ButtonFuc extends StatelessWidget {
                     )),
         ),
       ),
+    );
+  }
+}
+
+class ThaiKeyboard extends StatelessWidget {
+  var onLongPress;
+  Alignment alignment;
+  var onHightChange;
+  String img;
+  final String KeyboardText;
+  bool isTexOn;
+
+  final ValueSetter<String> onTextInput;
+  final int flex;
+
+  ThaiKeyboard({
+    Key? key,
+    this.alignment = Alignment.center,
+    this.onLongPress,
+    this.onHightChange,
+    required this.img,
+    required this.KeyboardText,
+    this.isTexOn = true,
+    required this.onTextInput,
+    this.flex = 1,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Padding(
+          padding: EdgeInsets.all(5),
+          child: Material(
+            borderRadius: BorderRadius.circular(5),
+            color: Colors.grey.shade50,
+            child: InkWell(
+              onLongPress: onLongPress,
+              onHighlightChanged: onHightChange,
+              onTap: () {
+                onTextInput.call(
+                    KeyboardText.replaceAll("\$", "").replaceAll(r"\Box", ""));
+              },
+              child: Center(
+                  child: Padding(
+                padding: const EdgeInsets.all(3.0),
+                child: Image(
+                  image: AssetImage(
+                    img,
+                    package: 'atomic_latex',
+                  ),
+                  fit: BoxFit.contain,
+                  alignment: alignment,
+                ),
+              )),
+            ),
+          )),
     );
   }
 }
