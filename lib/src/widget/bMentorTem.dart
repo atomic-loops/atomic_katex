@@ -1,7 +1,7 @@
 import 'package:atomic_latex/atomic_latex.dart';
 import 'package:atomic_latex/src/widget/text.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 import 'package:hexcolor/hexcolor.dart';
 
 class BMentorTemp extends StatefulWidget {
@@ -34,9 +34,13 @@ class _BMentorTempState extends State<BMentorTemp> {
     // widget.changeValue.dispose();
   }
 
+  var size, height, width;
   FocusNode node = FocusNode();
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    height = size.height;
+    width = size.width;
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -64,7 +68,7 @@ class _BMentorTempState extends State<BMentorTemp> {
                     padding: const EdgeInsets.only(left: 16, right: 16),
                     child: Container(
                       // margin: EdgeInsets.only(left: 5, right: 5, top: 5),
-                      height: Get.height * 0.2,
+                      height: height * 0.2,
                       decoration: BoxDecoration(
                           color: Colors.grey.shade100,
                           borderRadius: BorderRadius.circular(10)),
@@ -92,8 +96,8 @@ class _BMentorTempState extends State<BMentorTemp> {
                       right: 16,
                     ),
                     child: Container(
-                      height: Get.height * 0.1,
-                      width: Get.width,
+                      height: height * 0.1,
+                      width: width,
                       decoration: BoxDecoration(
                           color: Colors.grey.shade100,
                           borderRadius: BorderRadius.circular(10)),

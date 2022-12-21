@@ -1,7 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:atomic_latex/src/foundation/keyboardField.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class Func extends StatelessWidget {
   var aplpha;

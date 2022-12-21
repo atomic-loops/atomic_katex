@@ -7,7 +7,6 @@ import 'package:atomic_latex/src/foundation/keyboardField.dart';
 import 'package:atomic_latex/src/foundation/mathFiels.dart';
 import 'package:atomic_latex/src/foundation/value.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class AtomicKeyboard extends StatefulWidget {
   @override
@@ -51,7 +50,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
   bool intdx = false;
   bool sin = false;
   bool matrix = false;
-
+  var size, height, width;
   @override
   void initState() {
     // TODO: implement initState
@@ -63,8 +62,11 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
   }
 
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    height = size.height;
+    width = size.width;
     return AnimatedContainer(
-        height: widget.changeValue.isOpen == true ? Get.height * 0.4 : 0,
+        height: widget.changeValue.isOpen == true ? height * 0.4 : 0,
         duration: const Duration(milliseconds: 200),
         // color: widget.changeValue.isOpen == true
         //     ? Colors.grey.shade200
