@@ -53,32 +53,26 @@ class _BodyState extends State<Body> {
       color: Colors.blueGrey.shade100,
       child: SafeArea(
         top: false,
-        child: Expanded(
-          child: Column(
-            children: [
-              if (widget.alpha == true) ...[
-                if (english == true) ...[
-                  alphaKeyboard()
-                ] else ...[
-                  thaiKeyboard()
-                ]
-              ] else if (widget.x2 == true) ...[
-                x2()
-              ] else if (widget.sinx == true) ...[
-                sinX()
-              ] else if (widget.fx == true) ...[
-                fx()
-              ] else if (widget.elnx == true) ...[
-                enlx()
-              ] else if (widget.intdx == true) ...[
-                intdx()
-              ] else if (widget.matrix == true) ...[
-                matrix()
-              ] else if (widget.betaGamma == true) ...[
-                betaGamma()
-              ]
-            ],
-          ),
+        child: Column(
+          children: [
+            if (widget.alpha == true) ...[
+              if (english == true) ...[alphaKeyboard()] else ...[thaiKeyboard()]
+            ] else if (widget.x2 == true) ...[
+              x2()
+            ] else if (widget.sinx == true) ...[
+              sinX()
+            ] else if (widget.fx == true) ...[
+              fx()
+            ] else if (widget.elnx == true) ...[
+              enlx()
+            ] else if (widget.intdx == true) ...[
+              intdx()
+            ] else if (widget.matrix == true) ...[
+              matrix()
+            ] else if (widget.betaGamma == true) ...[
+              betaGamma()
+            ]
+          ],
         ),
       ),
     );

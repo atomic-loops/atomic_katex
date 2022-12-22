@@ -91,6 +91,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                     ),
                   ),
                   Expanded(
+                    // flex: 5,
                     child: Func(
                       aplpha: () {
                         if (aplpha == false) {

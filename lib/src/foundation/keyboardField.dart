@@ -138,27 +138,25 @@ class FunctionButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Padding(
-          padding: EdgeInsets.all(6),
-          child: Material(
-            borderRadius: BorderRadius.circular(7),
-            color: color,
-            child: InkWell(
-              onTap: onTab,
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Center(
-                    child: AtomicMathJax(
-                        textStyle: TextStyle(fontSize: fontSize),
-                        laTeXCode: Text(
-                          KeyboardText,
-                          style: TextStyle(fontSize: fontSize),
-                        ))),
-              ),
+    return Padding(
+        padding: EdgeInsets.all(6),
+        child: Material(
+          borderRadius: BorderRadius.circular(7),
+          color: color,
+          child: InkWell(
+            onTap: onTab,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Center(
+                  child: AtomicMathJax(
+                      textStyle: TextStyle(fontSize: fontSize),
+                      laTeXCode: Text(
+                        KeyboardText,
+                        style: TextStyle(fontSize: fontSize),
+                      ))),
             ),
-          )),
-    );
+          ),
+        ));
   }
 }
 

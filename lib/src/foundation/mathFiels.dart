@@ -42,6 +42,7 @@ class Func extends StatelessWidget {
   var nextTab;
 
   var previousTab;
+  var size, height, width;
   Func(
       {Key? key,
       required this.aplpha,
@@ -68,6 +69,9 @@ class Func extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    size = MediaQuery.of(context).size;
+    height = size.height;
+    width = size.width;
     return Row(
       children: [
         ButtonFuc(
