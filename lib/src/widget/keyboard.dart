@@ -66,7 +66,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
     height = size.height;
     width = size.width;
     return AnimatedContainer(
-        height: widget.changeValue.isOpen == true ? height * 0.4 : 0,
+        height: widget.changeValue.isOpen == true ? height * 0.45 : 0,
         duration: const Duration(milliseconds: 200),
         // color: widget.changeValue.isOpen == true
         //     ? Colors.grey.shade200
@@ -76,16 +76,19 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   // Expanded(child: Func()),
-                  Expanded(
-                    flex: 1,
-                    child: Align(
-                      alignment: Alignment.centerLeft,
+                  Align(
+                    alignment: Alignment.centerLeft,
+                    child: Container(
+                      height: height * 0.13,
                       child: Material(
                         // color: widget.changeValue.isOpen
                         //     ? Colors.grey.shade200
                         //     : Colors.transparent,
                         child: AtomicMathJax(
-                          laTeXCode: Text(widget.changeValue.previewString),
+                          laTeXCode: Text(
+                            widget.changeValue.previewString,
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                       ),
                     ),
