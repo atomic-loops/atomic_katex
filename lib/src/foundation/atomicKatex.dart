@@ -63,7 +63,7 @@ class _AtomicKatexState extends State<AtomicKatex> {
         textBlocks.add(WidgetSpan(
             alignment: PlaceholderAlignment.middle,
             child: TexImage(
-              keepAlive: true,
+              displayMode: false,
               laTeXMatch.group(3)!.trim(),
               fontSize: 15,
             )));
@@ -76,7 +76,7 @@ class _AtomicKatexState extends State<AtomicKatex> {
                 child: Padding(
                   padding: const EdgeInsets.all(1.0),
                   child: TexImage(
-                    keepAlive: true,
+                    displayMode: false,
                     laTeXMatch.group(6)!.trim(),
                     fontSize: 15,
                   ),
