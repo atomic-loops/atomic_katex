@@ -62,44 +62,49 @@ class _ExampleState extends State<Example> {
   FocusNode node = FocusNode();
   @override
   Widget build(BuildContext context) {
-    return AtomicKeyboardViewInsert(
-      node: node,
-      changeValue: changeValue,
-      child: Scaffold(
-          body: SingleChildScrollView(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const SizedBox(
-              height: 100,
-            ),
-            IconButton(
-                onPressed: () {
-                  // changeValue.controller.text = "123";
+    return Scaffold(
+        backgroundColor: Colors.amber,
+        body: SafeArea(
+          top: true,
+          child:
+              BMentorTemp(insert: () {}, back: () {}, changeValue: changeValue),
+        )
+        // Scaffold(
+        //     body: SingleChildScrollView(
+        //   child: Column(
+        //     mainAxisAlignment: MainAxisAlignment.center,
+        //     children: [
+        //       const SizedBox(
+        //         height: 100,
+        //       ),
+        //       IconButton(
+        //           onPressed: () {
+        //             // changeValue.controller.text = "123";
 
-                  Get.dialog(BMentorTemp(
-                      insert: () {}, back: () {}, changeValue: changeValue));
-                },
-                icon: Icon(Icons.open_in_full))
-            // AtomicInputField(
-            //   node: node,
-            //   isVisible: ((value) {
-            //     setState(() {
-            //       changeValue.updateValue(value);
-            //     });
-            //   }),
-            //   changeValue: changeValue,
-            // ),
-            // const SizedBox(
-            //   height: 20,
-            // ),
-            // AtomicKatexPreview(
-            //   laTex: changeValue.controller.text,
-            // )
-          ],
-        ),
-      )),
-    );
+        //             Get.dialog(BMentorTemp(
+        //                 insert: () {}, back: () {}, changeValue: changeValue));
+        //           },
+        //           icon: Icon(Icons.open_in_full))
+        //       // AtomicInputField(
+        //       //   node: node,
+        //       //   isVisible: ((value) {
+        //       //     setState(() {
+        //       //       changeValue.updateValue(value);
+        //       //     });
+        //       //   }),
+        //       //   changeValue: changeValue,
+        //       // ),
+        //       // const SizedBox(
+        //       //   height: 20,
+        //       // ),
+        //       // AtomicKatexPreview(
+        //       //   laTex: changeValue.controller.text,
+        //       // )
+        //     ],
+        //   ),
+        // )),
+
+        );
   }
 
   eq() {
