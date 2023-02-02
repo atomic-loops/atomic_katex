@@ -3417,7 +3417,7 @@ class _BodyState extends State<Body> {
     return Expanded(
       child: Row(
         children: [
-          LatexKey(
+          LatexKey1(
             KeyboardText: r"$x^2$",
             onTextInput: textInputHandler,
             isTexOn: widget.idTexOn,

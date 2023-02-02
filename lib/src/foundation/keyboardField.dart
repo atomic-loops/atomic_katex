@@ -69,6 +69,71 @@ class LatexKey extends StatelessWidget {
   }
 }
 
+class LatexKey1 extends StatelessWidget {
+  var onLongPress;
+
+  var onHightChange;
+
+  double fontSize;
+
+  bool mathjax;
+
+  var textAlign;
+
+  LatexKey1({
+    Key? key,
+    this.mathjax = false,
+    this.onLongPress,
+    this.onHightChange,
+    this.fontSize = 12,
+    required this.KeyboardText,
+    this.isTexOn = true,
+    required this.onTextInput,
+    this.textAlign = TextAlign.center,
+    this.flex = 1,
+  }) : super(key: key);
+
+  final String KeyboardText;
+  bool isTexOn;
+
+  final ValueSetter<String> onTextInput;
+  final int flex;
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Padding(
+          padding: EdgeInsets.all(5),
+          child: Material(
+            borderRadius: BorderRadius.circular(5),
+            color: Colors.grey.shade50,
+            child: InkWell(
+              onLongPress: onLongPress,
+              onHighlightChanged: onHightChange,
+              onTap: () {
+                onTextInput.call(
+                    KeyboardText.replaceAll("\$", "").replaceAll(r"x", ""));
+              },
+              child: Center(
+                  child: mathjax
+                      ? AtomicKatex(
+                          textStyle: TextStyle(fontSize: fontSize),
+                          laTeXCode: Text(
+                            KeyboardText,
+                            style: TextStyle(fontSize: fontSize),
+                            textAlign: textAlign,
+                          ))
+                      : AtomicMathJax(
+                          textStyle: TextStyle(fontSize: fontSize),
+                          laTeXCode: Text(KeyboardText,
+                              style: TextStyle(fontSize: fontSize),
+                              textAlign: textAlign))),
+            ),
+          )),
+    );
+  }
+}
+
 class ButtonKey extends StatelessWidget {
   final IconData? icon;
 
