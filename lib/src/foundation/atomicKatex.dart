@@ -1,7 +1,5 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
-
 import 'package:flutter/material.dart';
-import 'package:flutter_math_fork/flutter_math.dart';
+
 import 'package:flutter_tex_js/flutter_tex_js.dart';
 
 class AtomicKatex extends StatefulWidget {
