@@ -153,7 +153,7 @@ class _BMentorTempState extends State<BMentorTemp> {
                         ),
                       ),
                       SizedBox(
-                        width: 16,
+                        width: width * 0.016,
                       )
                     ],
                   )

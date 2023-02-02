@@ -66,7 +66,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
     height = size.height;
     width = size.width;
     return AnimatedContainer(
-        height: widget.changeValue.isOpen == true ? height * 0.45 : 0,
+        height: widget.changeValue.isOpen == true ? height * 0.4 : 0,
         duration: const Duration(milliseconds: 200),
         // color: widget.changeValue.isOpen == true
         //     ? Colors.grey.shade200
@@ -79,7 +79,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Container(
-                      height: height * 0.13,
+                      height: height * 0.1,
                       child: Material(
                         // color: widget.changeValue.isOpen
                         //     ? Colors.grey.shade200
@@ -94,7 +94,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                     ),
                   ),
                   Expanded(
-                    // flex: 5,
+                    flex: 2,
                     child: Func(
                       aplpha: () {
                         if (aplpha == false) {
@@ -241,7 +241,7 @@ class _AtomicKeyboardState extends State<AtomicKeyboard> {
                     ),
                   ),
                   Expanded(
-                    flex: 4,
+                    flex: 5,
                     child: Body(
                       onBackspace: backspaceHandler,
                       onTextInput: textInputHandler,
