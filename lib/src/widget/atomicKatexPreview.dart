@@ -13,13 +13,17 @@ class AtomicKatexPreview extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size, height, width;
+    size = MediaQuery.of(context).size;
+    height = size.height;
+    width = size.width;
     return AtomicKatex(
       laTeXCode: Text(
         laTex
             .replaceAll("\\(", "\$")
             .replaceAll("\\)", "\$")
             .replaceAll("<br>", "\n"),
-        style: TextStyle(fontSize: 15),
+        style: TextStyle(fontSize: width * 0.03),
       ),
     );
   }
