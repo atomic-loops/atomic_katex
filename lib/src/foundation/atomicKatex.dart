@@ -64,6 +64,9 @@ class _AtomicKatexState extends State<AtomicKatex> {
               displayMode: false,
               laTeXMatch.group(3)!.trim(),
               fontSize: 15,
+              error: (context, error) {
+                return Text("");
+              },
             )));
       } else {
         textBlocks.addAll([
@@ -77,6 +80,9 @@ class _AtomicKatexState extends State<AtomicKatex> {
                     displayMode: false,
                     laTeXMatch.group(6)!.trim(),
                     fontSize: 15,
+                    error: (context, error) {
+                      return Text("");
+                    },
                   ),
                 ),
               )),
