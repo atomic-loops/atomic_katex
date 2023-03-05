@@ -17,14 +17,15 @@ class AtomicKatexPreview extends StatelessWidget {
     size = MediaQuery.of(context).size;
     height = size.height;
     width = size.width;
-    return AtomicKatex(
-      laTeXCode: Text(
-        laTex
-            .replaceAll("\\(", "\$")
-            .replaceAll("\\)", "\$")
-            .replaceAll("<br>", "\n"),
-        style: TextStyle(fontSize: width * 0.03),
-      ),
-    );
+    return Builder(
+        builder: (context) => AtomicKatex(
+              laTeXCode: Text(
+                laTex
+                    .replaceAll("\\(", "\$")
+                    .replaceAll("\\)", "\$")
+                    .replaceAll("<br>", "\n"),
+                style: TextStyle(fontSize: width * 0.03),
+              ),
+            ));
   }
 }
