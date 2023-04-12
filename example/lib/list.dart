@@ -108,7 +108,10 @@ class _ListDViewState extends State<ListDView> {
                   ListTile(
                     title: Text("Question ${index + 1}"),
                     subtitle: isKatex
-                        ? AtomicKatexPreview(laTex: question[index])
+                        ? AtomicKatexPreview(
+                            laTex: question[index],
+                            key: ValueKey(index),
+                          )
                         : AtomicPreview(laTex: question[index]),
                   ),
                   SizedBox(
@@ -119,7 +122,8 @@ class _ListDViewState extends State<ListDView> {
                     subtitle: isKatex
                         ? SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
-                            child: AtomicKatexPreview(laTex: answer[index]))
+                            child: AtomicKatexPreview(
+                                laTex: answer[index], key: ValueKey(index)))
                         : SingleChildScrollView(
                             scrollDirection: Axis.horizontal,
                             child: AtomicPreview(laTex: answer[index])),

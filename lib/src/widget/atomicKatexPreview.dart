@@ -18,6 +18,7 @@ class AtomicKatexPreview extends StatelessWidget {
     height = size.height;
     width = size.width;
     return AtomicKatex(
+      key: key,
       laTeXCode: Text(
         laTex
             .replaceAll("\\(", "\$")
