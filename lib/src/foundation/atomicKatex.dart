@@ -131,12 +131,15 @@ class TexImage extends StatefulWidget {
     this.error,
     this.alignment = Alignment.center,
     this.keepAlive = true,
+    required this.reqId,
     Key? key,
   }) : super(key: key);
 
   /// LaTeX markup to render. See here for supported syntax:
   /// https://katex.org/docs/supported.html
   final String math;
+
+  final String reqId;
 
   /// [displayMode] is KaTeX's displayMode: math will be in display mode (\int,
   /// \sum, etc. will be large). This is appropriate for "block" display, as
@@ -173,15 +176,15 @@ class TexImage extends StatefulWidget {
 
 class _TexImageState extends State<TexImage>
     with AutomaticKeepAliveClientMixin<TexImage> {
-  String get id =>
-      widget.key?.hashCode.toString() ?? identityHashCode(this).toString();
+  // String get id =>
+  //     widget.key?.hashCode.toString() ?? identityHashCode(this).toString();
 
   Future<Uint8List?>? _renderFuture;
   List? _renderArgs;
 
   @override
   void dispose() {
-    FlutterTexJs.cancel(id);
+    FlutterTexJs.cancel(widget.reqId);
     super.dispose();
   }
 
@@ -237,7 +240,7 @@ class _TexImageState extends State<TexImage>
         return FutureBuilder<Uint8List?>(
           future: _buildRenderFuture(
             widget.math,
-            requestId: id,
+            requestId: widget.reqId,
             displayMode: widget.displayMode,
             color: widget.color ?? textStyle.color ?? _kDefaultTextColor,
             fontSize:
@@ -293,9 +296,12 @@ class AtomicKatex extends StatefulWidget {
     this.textStyle,
     this.delimiter = r'$',
     this.displayDelimiter = r'$$',
+    this.fid,
   }) : super(key: key);
   // a Text used for the rendered code as well as for the style
   final Text laTeXCode;
+
+  final String? fid;
 
   final TextStyle? textStyle;
 
@@ -350,6 +356,8 @@ class _AtomicKatexState extends State<AtomicKatex> {
               error: (context, error) {
                 return Text("");
               },
+              reqId:
+                  "${laTeXMatch.group(3)!.trim().hashCode.toString()}${widget.fid.hashCode.toString()}",
             )));
       } else {
         textBlocks.addAll([
@@ -366,6 +374,8 @@ class _AtomicKatexState extends State<AtomicKatex> {
                     error: (context, error) {
                       return Text("");
                     },
+                    reqId:
+                        "${laTeXMatch.group(6)!.trim().hashCode.toString()}${widget.fid.hashCode.toString()}",
                   ),
                 ),
               )),

@@ -103,9 +103,11 @@ class _BMentorTempState extends State<BMentorTemp> {
                           borderRadius: BorderRadius.circular(10)),
                       child: Center(
                         child: AtomicKatexPreview(
-                            laTex: widget.changeValue.controller.text.isEmpty
-                                ? "Preview"
-                                : "\$${widget.changeValue.controller.text}\$"),
+                          laTex: widget.changeValue.controller.text.isEmpty
+                              ? "Preview"
+                              : "\$${widget.changeValue.controller.text}\$",
+                          fid: widget.key.hashCode.toString(),
+                        ),
                       ),
                     ),
                   ),

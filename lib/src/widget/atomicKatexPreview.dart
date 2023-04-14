@@ -5,9 +5,10 @@ import 'package:atomic_latex/src/foundation/atomicMathjax.dart';
 
 class AtomicKatexPreview extends StatelessWidget {
   String laTex;
-
+  String fid;
   AtomicKatexPreview({
     Key? key,
+    required this.fid,
     required this.laTex,
   }) : super(key: key);
 
@@ -18,7 +19,7 @@ class AtomicKatexPreview extends StatelessWidget {
     height = size.height;
     width = size.width;
     return AtomicKatex(
-      key: key,
+      fid: fid,
       laTeXCode: Text(
         laTex
             .replaceAll("\\(", "\$")

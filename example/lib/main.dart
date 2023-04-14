@@ -1,5 +1,6 @@
 import 'package:atomic_latex/atomic_latex.dart';
 import 'package:example/list.dart';
+import 'package:example/newList.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -28,7 +29,7 @@ class MyApp extends StatelessWidget {
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
-        home: const ListDView());
+        home: const NewListD());
   }
 }
 

@@ -16,7 +16,7 @@ class NewListD extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView.builder(
-          itemCount: 300,
+          itemCount: 200,
           itemBuilder: (context, index) {
             return Column(
               children: [
@@ -26,9 +26,11 @@ class NewListD extends StatelessWidget {
                 Container(
                   height: 80,
                   child: AtomicKatexPreview(
-                      key: ValueKey(index),
-                      laTex:
-                          "ให้ \\(a=16\\) จงหาค่าของ \\(a^{\\frac{11}{16}}\\left[a\\left\\{a\\left(a^{\\frac{1}{2}}\\right)^{\\frac{1}{2}}\\right\\}^{\\frac{1}{2}}\\right]^{\\frac{1}{2}}\\)"),
+                    // key: ValueKey(index),
+                    laTex:
+                        "ให้ \\(a=16\\) จงหาค่าของ \\(a^{\\frac{11}{16}}\\left[a\\left\\{a\\left(a^{\\frac{1}{2}}\\right)^{\\frac{1}{2}}\\right\\}^{\\frac{1}{2}}\\right]^{\\frac{1}{2}}\\)",
+                    fid: ValueKey(index).toString(),
+                  ),
                 ),
 
                 // for (int i = 0; i > 4; i++) ...[
@@ -36,9 +38,11 @@ class NewListD extends StatelessWidget {
                 Container(
                   height: 80,
                   child: AtomicKatexPreview(
-                      // key: ValueKey(generateRandomString(index)),
-                      laTex:
-                          "กำหนดให้ \\(\\mathrm{x}=\\sqrt{11-6 \\sqrt{2}}-\\sqrt{6-4 \\sqrt{2}}\\) จงหาค่าของ \\(\\sqrt{\\mathrm{x}^{2}-\\mathrm{x}}\\)"),
+                    // key: ValueKey(generateRandomString(index)),
+                    laTex:
+                        "กำหนดให้ \\(\\mathrm{x}=\\sqrt{11-6 \\sqrt{2}}-\\sqrt{6-4 \\sqrt{2}}\\) จงหาค่าของ \\(\\sqrt{\\mathrm{x}^{2}-\\mathrm{x}}\\)",
+                    fid: ValueKey(index).toString(),
+                  ),
                 ),
                 // ]
               ],
